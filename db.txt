@@ -4,46 +4,48 @@ e inseritela in un file .txt all'interno della repo, proprio come fatto stamatti
 NOME_TABELLA: MACCHINA_USATA
 
 
-ID                                        UNSIGNED (MEDIUM_INT)  |  AUTO_INCREMENT  |  DEFAULT
-MARCA                                     VARCHAR (50)  |  NOT_NULL
-MODELLO                                   VARCHAR (80)  |  NOT_NULL
-ANNO_DI_IMMATRICOLAZIONE                  YEAR  |  NOT_NULL 
-PREZZO_USATO_€                            MEDIUMINT  |  NOT_NULL
-COLORE_CARROZZERIA                        VARCHAR (80)  |  NOT_NULL
-COLORE_INTERNI                            VARCHAR (80)  |  NULL
-MATERIALI_INTERNI                         VARCHAR (255)  |  NULL
-KM                                        MEDIUMINT  |  NOT_NULL
-INCIDENTI                                 VARCHAR (2)  |  NULL
-TAGLIANDI_CERTIFICATI                     VARCHAR (2)  |  NOT_NULL
-ACCESSORI                                 TEXT  |  NULL
-TRAZIONE                                  VARCHAR (3)  |  NOT_NULL
-TRASMISSIONE                              VARCHAR (80)  |  NOT_NULL
-GOMME                                     VARCHAR (80)  |  NULL
-CILINDRATA                                SMALLINT  |  NOT_NULL
-GEOMETRIA_CILINDRI                        VARCHAR (80)  |  NOT_NULL
-ASPIRAZIONE                               VARCHAR (50)  |  NOT_NULL
-POTENZA_MAX                               SMALLINT  |  NOT_NULL
-COPPIA_MAX                                SMALLINT  |  NOT_NULL
-ALIMENTAZIONE                             VARCHAR (20)  |  NOT_NULL
-TIPOLOGIA_GRUPPI_OTTICI                   VARCHAR (80)  | NULL
-TECNOLOGIA_INFOTAINMENT                   VARCHAR (255)  |  NULL
-VIRTUAL_COCKPIT                           VARCHAR (3)  |  NULL
-PESO_A_VUOTO                              SMALLINT  |  NOT_NULL
-CARICO_MAX                                SMALLINT  |  NOT_NULL
-MASSA_RIMORCHIABILE                       SMALLINT  |  NOT_NULL
-VELOCITÀ_MAX                              SMALLINT  |  NOT_NULL
-0-100KM/H                                 FLOAT (4, 2)  |  NOT_NULL
-CONSUMI_LITRI_PER_100KM                   FLOAT (3, 1)  |  NOT_NULL
-OMOLOGAZIONE_ANTI_INQUINAMENTO            VARCHAR (5)  |  NOT_NULL
-NUMERO_POSTI                              TINYINT  |  NOT_NULL
-NUMERO_PORTE                              TINYINT  |  NOT_NULL
-CAPACITÀ_SERBATOIO                        TINYINT  |  NOT_NULL
-ALTEZZA_VEICOLO_CM                        TINYINT  |  NULL
-LARGHEZZA_VEICOLO_CM                      TINYINT  |  NULL
-LUNGHEZZA_VEICOLO_CM                      TINYINT  |  NULL
-IMMAGINE                                  TEXT  |  NOT_NULL
-DESCRIZIONE                               TEXT  |  NULL
-LUOGO_DI_VENDITA                          VARCHAR (255)  |  NOT_NULL
-VENDITORE                                 VARCHAR (255)  |  NOT_NULL
-CONTATTO_TELEFONICO                       VARCHAR (20)  |  NOT_NULL
-CONTATTO_EMAIL                            VARCHAR  (255)  |  NOT_NULL
+id                                        UNSIGNED (MEDIUM_INT)  |  AUTO_INCREMENT  |  DEFAULT
+marca                                     VARCHAR (50)  |  NOT_NULL
+modello                                   VARCHAR (80)  |  NOT_NULL
+anno_immatricolazione                     YEAR  |  NOT_NULL 
+prezzo_usato_in_euro                      MEDIUMINT  |  NOT_NULL
+colore_carrozzeria                        VARCHAR (80)  |  NOT_NULL
+colore_interni                            VARCHAR (80)
+materiali_interni                         VARCHAR (255)
+km                                        MEDIUMINT  |  NOT_NULL
+incidenti                                 VARCHAR (2)  |  DEFAULT "No"
+tagliandi_certificati                     VARCHAR (2)  |  NOT_NULL  |  DEFAULT "No"
+accessori                                 TEXT
+trazione                                  VARCHAR (3)  |  NOT_NULL  |  DEFAULT "FWD"
+trasmissione                              VARCHAR (80)  |  NOT_NULL  |  DEFAULT "Manuale"
+marca_gomme                               VARCHAR (80)
+modello_gomme                             VARCHAR (80)
+stato_usura_gomme                         VARCHAR (20)
+cilindrata                                SMALLINT  |  NOT_NULL
+geometria_cilindri                        VARCHAR (80)  |  NOT_NULL
+aspirazione                               VARCHAR (50)  |  NOT_NULL
+potenza_max                               SMALLINT  |  NOT_NULL
+coppia_max                                SMALLINT  |  NOT_NULL
+alimentazione                             VARCHAR (20)  |  NOT_NULL  |  DEFAULT "Benzina"
+tipologia_gruppi_ottici                   VARCHAR (80)  |  DEFAULT "Alogeni"
+tecnologia_infotainment                   VARCHAR (255)
+virtual_cockpit                           VARCHAR (2)  |  DEFAULT "No"
+peso_a_vuoto                              SMALLINT  |  NOT_NULL
+carico_max                                SMALLINT  |  NOT_NULL
+massa_rimorchiabile                       SMALLINT  |  NOT_NULL  |  DEFAULT 0
+velocità_max                              SMALLINT  |  NOT_NULL
+0-100kmph                                 FLOAT (4, 2)  |  NOT_NULL
+consumo_litro_per_100km                   FLOAT (3, 1)  |  NOT_NULL
+omologazione_anti_inquinamento            VARCHAR (5)  |  NOT_NULL  |  DEFAULT "Euro1"
+numero_posti                              TINYINT  |  NOT_NULL  |  DEFAULT 4
+numero_porte                              TINYINT  |  NOT_NULL  |  DEFAULT 5
+capacità_serbatoio                        TINYINT  |  NOT_NULL
+altezza_veicolo_cm                        TINYINT
+larghezza_veicolo_cm                      TINYINT
+lunghezza_veicolo_cm                      TINYINT
+immagine                                  TEXT  |  NOT_NULL
+descrizione                               TEXT  |  DEFAULT "Nessuna descrizione"
+luogo_di_vendita                          VARCHAR (255)  |  NOT_NULL
+venditore                                 VARCHAR (255)  |  NOT_NULL  |  DEFAULT "Venditore sconosciuto"
+contatto_telefonico                       VARCHAR (20)  |  NOT_NULL
+contatto_email                            VARCHAR  (255)  |  NOT_NULL  |  DEFAULT "esempio@gmail.com"
