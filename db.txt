@@ -1,2 +1,49 @@
 Modellizzare la struttura di una tabella per memorizzare tutti i dati riguardanti delle auto usate messe in vendita da un concessionario,
 e inseritela in un file .txt all'interno della repo, proprio come fatto stamattina insieme.
+
+NOME_TABELLA: MACCHINA_USATA
+
+
+ID                                        UNSIGNED (MEDIUM_INT)  |  AUTO_INCREMENT  |  DEFAULT
+MARCA                                     VARCHAR (50)  |  NOT_NULL
+MODELLO                                   VARCHAR (80)  |  NOT_NULL
+ANNO_DI_IMMATRICOLAZIONE                  YEAR  |  NOT_NULL 
+PREZZO_USATO_€                            MEDIUMINT  |  NOT_NULL
+COLORE_CARROZZERIA                        VARCHAR (80)  |  NOT_NULL
+COLORE_INTERNI                            VARCHAR (80)  |  NULL
+MATERIALI_INTERNI                         VARCHAR (255)  |  NULL
+KM                                        MEDIUMINT  |  NOT_NULL
+INCIDENTI                                 VARCHAR (2)  |  NULL
+TAGLIANDI_CERTIFICATI                     VARCHAR (2)  |  NOT_NULL
+ACCESSORI                                 TEXT  |  NULL
+TRAZIONE                                  VARCHAR (3)  |  NOT_NULL
+TRASMISSIONE                              VARCHAR (80)  |  NOT_NULL
+GOMME                                     VARCHAR (80)  |  NULL
+CILINDRATA                                SMALLINT  |  NOT_NULL
+GEOMETRIA_CILINDRI                        VARCHAR (80)  |  NOT_NULL
+ASPIRAZIONE                               VARCHAR (50)  |  NOT_NULL
+POTENZA_MAX                               SMALLINT  |  NOT_NULL
+COPPIA_MAX                                SMALLINT  |  NOT_NULL
+ALIMENTAZIONE                             VARCHAR (20)  |  NOT_NULL
+TIPOLOGIA_GRUPPI_OTTICI                   VARCHAR (80)  | NULL
+TECNOLOGIA_INFOTAINMENT                   VARCHAR (255)  |  NULL
+VIRTUAL_COCKPIT                           VARCHAR (3)  |  NULL
+PESO_A_VUOTO                              SMALLINT  |  NOT_NULL
+CARICO_MAX                                SMALLINT  |  NOT_NULL
+MASSA_RIMORCHIABILE                       SMALLINT  |  NOT_NULL
+VELOCITÀ_MAX                              SMALLINT  |  NOT_NULL
+0-100KM/H                                 FLOAT (4, 2)  |  NOT_NULL
+CONSUMI_LITRI_PER_100KM                   FLOAT (3, 1)  |  NOT_NULL
+OMOLOGAZIONE_ANTI_INQUINAMENTO            VARCHAR (5)  |  NOT_NULL
+NUMERO_POSTI                              TINYINT  |  NOT_NULL
+NUMERO_PORTE                              TINYINT  |  NOT_NULL
+CAPACITÀ_SERBATOIO                        TINYINT  |  NOT_NULL
+ALTEZZA_VEICOLO_CM                        TINYINT  |  NULL
+LARGHEZZA_VEICOLO_CM                      TINYINT  |  NULL
+LUNGHEZZA_VEICOLO_CM                      TINYINT  |  NULL
+IMMAGINE                                  TEXT  |  NOT_NULL
+DESCRIZIONE                               TEXT  |  NULL
+LUOGO_DI_VENDITA                          VARCHAR (255)  |  NOT_NULL
+VENDITORE                                 VARCHAR (255)  |  NOT_NULL
+CONTATTO_TELEFONICO                       VARCHAR (20)  |  NOT_NULL
+CONTATTO_EMAIL                            VARCHAR  (255)  |  NOT_NULL
